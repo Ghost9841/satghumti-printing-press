@@ -21,12 +21,18 @@ const HeroSection = () => {
                   Highest quality printing with latest technology, engaging and productive.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+977 984-1877618">
+
                 <Button variant="outline" className="text-blue-600 border-white bg-white hover:bg-blue-600 hover:text-white">
               <PrinterIcon className="mr-2 h-4 w-4" /> Print Now
             </Button>
+                </a>
+                <a href="tel:+977 984-1877618">
+
             <Button size="default" variant="default" className="bg-blue-600 text-white border border-white hover:bg-white hover:text-blue-600">
                 <PhoneCall className="mr-2 h-4 w-4" /> Available for 24/7
               </Button>
+                </a>
                 </div>
                 
                 <p className="text-sm text-blue-100">

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Clock, Users, Award } from 'lucide-react'
+import TransitionEffect from "@/components/TransitionEffect"
 
 const stats = [
   { label: "Years of Experience", value: "30+", icon: Clock },
@@ -17,6 +18,7 @@ const teamMembers = [
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen">
+      <TransitionEffect/>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-b from-blue-600 to-blue-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

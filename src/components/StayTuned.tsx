@@ -14,13 +14,21 @@ const StayTuned = () => {
           <div className="flex justify-center space-x-8">
             <div className="flex items-center">
               <MapPin className="h-6 w-6 mr-2" />
+              <a href="https://maps.app.goo.gl/S7jXg6KXJaes5i2k8">
+
               <span>Kathmandu, Nepal, 44600</span>
+              </a>
             </div>
             <div className="flex items-center">
-              <span>+977 9840704336</span>
+            <a href="tel:+9779860104336">
+
+              <span>+977 984-1877618</span>
+            </a>
             </div>
             <div className="flex items-center">
+            <a href="mailto:asubedi778@gmail.com">
               <span>logo@mailaddress@gmail.com</span>
+            </a>
             </div>
           </div>
         </div>

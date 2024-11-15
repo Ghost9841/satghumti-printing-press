@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/NavBar'
 import Footer from '@/components/Footer'
+import TransitionEffect from '@/components/TransitionEffect'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col min-h-screen bg-white">
+        <TransitionEffect/>
+        <div className="flex flex-col min-h-screen bg-white text-black">
           <Navbar />
           <main className="flex-grow">{children}</main>
           <Footer />

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Printer, Maximize, FileText, PenTool, Truck } from 'lucide-react'
 import { printing_data } from '@/assets/assets'
 import Link from 'next/link'
+import TransitionEffect from "@/components/TransitionEffect"
 
 const iconMap = {
   "Digital Printing": Printer,
@@ -17,6 +18,7 @@ const iconMap = {
 export default function Services() {
   return (
     <div className="flex flex-col min-h-screen">
+      <TransitionEffect/>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-b from-blue-600 to-blue-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
