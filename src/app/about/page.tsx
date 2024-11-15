@@ -9,9 +9,9 @@ const stats = [
 ]
 
 const teamMembers = [
-  { name: "John Doe", role: "Founder & CEO", image: "/placeholder.svg?height=300&width=300" },
-  { name: "Jane Smith", role: "Head of Operations", image: "/placeholder.svg?height=300&width=300" },
-  { name: "Mike Johnson", role: "Lead Designer", image: "/placeholder.svg?height=300&width=300" },
+  { name: "Parmila Acharya", role: "Co-Founder", image: "/placeholder.svg?height=300&width=300" },
+  { name: "Harihar Subedi", role: "CEO", image: "/placeholder.svg?height=300&width=300" },
+  { name: "Aakash Subedi", role: "Designer", image: "/placeholder.svg?height=300&width=300" },
 ]
 
 export default function About() {

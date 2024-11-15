@@ -1,39 +1,18 @@
+'use client'
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Printer, Maximize, FileText, PenTool, Truck } from 'lucide-react'
+import { printing_data } from '@/assets/assets'
+import Link from 'next/link'
 
-const services = [
-  {
-    title: "Digital Printing",
-    description: "High-quality digital printing services with quick turnaround times. Perfect for small to medium runs of brochures, flyers, and business cards.",
-    icon: Printer,
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    title: "Offset Printing",
-    description: "Traditional offset printing for large volume jobs with consistent, high-quality results. Ideal for magazines, books, and high-volume marketing materials.",
-    icon: FileText,
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    title: "Large Format Printing",
-    description: "Eye-catching large format prints for banners, posters, and signage. Make a big impact with our high-resolution wide format printing services.",
-    icon: Maximize,
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    title: "Graphic Design",
-    description: "Professional graphic design services to bring your ideas to life. Our team of experienced designers can help create stunning visuals for your print projects.",
-    icon: PenTool,
-    image: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    title: "Finishing & Binding",
-    description: "Complete your print projects with our range of finishing and binding services, including lamination, embossing, die-cutting, and various binding options.",
-    icon: Truck,
-    image: "/placeholder.svg?height=400&width=600",
-  },
-]
+const iconMap = {
+  "Digital Printing": Printer,
+  "Offset Printing": FileText,
+  "Large Format": Maximize,
+  "Graphic Design": PenTool,
+  "Finishing & Binding": Truck,
+}
 
 export default function Services() {
   return (
@@ -61,27 +40,34 @@ export default function Services() {
       {/* Services */}
       <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {services.map((service, index) => (
-            <div key={index} className={`flex flex-col md:flex-row gap-12 items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} mb-24`}>
-              <div className="flex-1">
-                <div className="flex items-center mb-4">
-                  <service.icon className="h-8 w-8 text-blue-600 mr-4" />
-                  <h2 className="text-3xl font-bold text-gray-900">{service.title}</h2>
+          {printing_data.map((service, index) => {
+            const Icon = iconMap[service.title as keyof typeof iconMap] || Printer
+            return (
+              <div key={service.id} className={`flex flex-col md:flex-row gap-12 items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} mb-24`}>
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <Icon className="h-8 w-8 text-blue-600 mr-4" />
+                    <h2 className="text-3xl font-bold text-gray-900">{service.title}</h2>
+                  </div>
+                  <p className="text-lg text-gray-600 mb-6">{service.description}</p>
+                  <Link href={`/printing/${service.id}`}>
+                    <Button variant="outline" className="text-blue-600 border-blue-600 bg-white hover:bg-blue-600 hover:text-white">
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
-                <p className="text-lg text-gray-600 mb-6">{service.description}</p>
-                <Button size="lg">Learn More</Button>
+                <div className="flex-1">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={600}
+                    height={400}
+                    className="rounded-lg shadow-lg"
+                  />
+                </div>
               </div>
-              <div className="flex-1">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
 
@@ -90,9 +76,11 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Start Your Printing Project?</h2>
           <p className="text-xl text-blue-100 mb-8">Contact us today for a free consultation and quote. Our team of experts is ready to bring your ideas to life.</p>
+         <Link href="">
           <Button size="lg" variant="default" className="bg-white text-blue-600 hover:bg-blue-50">
             Get a Free Quote
           </Button>
+         </Link>
         </div>
       </div>
     </div>
