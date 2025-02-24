@@ -6,9 +6,11 @@ import { assets } from "@/assets/assets";
 import Image from 'next/image';
 const Footer = () => {
   const currentYear = new Date().getFullYear()
-
+  
   return (
+    
     <footer className="bg-blue-600 text-white border-blue-700 border-2 shadow-md">
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2 ">
@@ -71,6 +73,7 @@ const Footer = () => {
           <p className="text-center text-blue-100">
             © {currentYear} Satghumti Printing Press. All rights reserved.
           </p>
+
         </div>
       </div>
     </footer>

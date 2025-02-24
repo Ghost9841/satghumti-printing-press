@@ -20,7 +20,7 @@ const StayTuned = () => {
               </a>
             </div>
             <div className="flex items-center">
-            <a href="tel:+9779860104336">
+            <a href="tel:+977 984-1877618">
 
               <span>+977 984-1877618</span>
             </a>
