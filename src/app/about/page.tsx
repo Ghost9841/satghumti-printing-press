@@ -46,10 +46,10 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in 1990, Satghumti Printing Press began as a small family-owned business with a vision to provide top-quality printing services to our local community. Over the years, we've grown into one of the leading printing companies in Nepal, serving clients across various industries.
+                Founded in 1990, Satghumti Printing Press began as a small family-owned business with a vision to provide top-quality printing services to our local community. Over the years, we&apos;ve grown into one of the leading printing companies in Nepal, serving clients across various industries.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Our journey has been marked by continuous innovation, investment in cutting-edge technology, and a commitment to excellence. We've weathered industry changes and economic challenges, always adapting and evolving to meet our clients' needs.
+                Our journey has been marked by continuous innovation, investment in cutting-edge technology, and a commitment to excellence. We&apos;ve weathered industry changes and economic challenges, always adapting and evolving to meet our clients needs.
               </p>
               <Button size="lg">Learn More About Our Journey</Button>
             </div>

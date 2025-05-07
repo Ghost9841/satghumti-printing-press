@@ -8,9 +8,7 @@ import { Button } from '@/components/ui/button'
 import TransitionEffect from '@/components/TransitionEffect'
 
 interface PrintingPageProps {
-  params: {
-    id: string
-  }
+  params: Promise<{ id: string }>
 }
 
 interface PrintingPageData {
@@ -27,7 +25,7 @@ const PrintingPage = ({ params }: PrintingPageProps) => {
 
   const fetchBlogData = async ()=> {
     for (let i = 0; i < printing_data.length; i++) {
-     if (Number((await params).id)===printing_data[i].id) {
+     if (Number((await (params)).id)===printing_data[i].id) {
       setData(printing_data[i]);
       console.log(printing_data[i]);
       break;
