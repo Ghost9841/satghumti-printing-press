@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   keywords: [
     'Satghumti Printing Press',
     'printing press in Kathmandu',
+    'printing press in Bagbazar',
     'printing services Nepal',
     'commercial printing Kathmandu',
     'business card printing Nepal',
