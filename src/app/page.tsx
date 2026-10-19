@@ -1,31 +1,23 @@
 
-
-import Difference from "@/components/Difference"
-import HeroSection from "@/components/HeroSection"
-import StayTuned from "@/components/StayTuned"
-import ExploreServices from "@/components/ExploreServices"
-import TransitionEffect from "@/components/TransitionEffect"
-import Header from "@/components/header"
-
-import QuoteForm from "@/components/quote-form"
-import Contact from "@/components/contact"
-import Footer from "@/components/footer copy"
-import HeroWithAH from "@/components/hero"
-import Services from "@/components/services"
-import Audiences from "@/components/audiences"
-import Process from "@/components/process"
-
-
-
+import NavBar from "@/components/bar/NavBar"
+import QuoteForm from "@/app/(home)/QuoteForm"
+import Contact from "@/app/(home)/ContactComp"
+import Footer from "@/components/bar/Footer"
+import HeroWithAH from "@/app/(home)/HeroSectionComp"
+import Services from "@/app/(home)/ServicesComp"
+import Audiences from "@/app/(home)/AudiencesComp"
+import Process from "@/app/(home)/ProcessComp"
+import WorkGallery from "@/components/work-gallery"
 
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <NavBar />
       <main>
         <HeroWithAH />
         <Services />
+        <WorkGallery />
         <Audiences />
         <Process />
         <QuoteForm />

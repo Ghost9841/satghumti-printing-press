@@ -1,7 +1,5 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/NavBar'
-import Footer from '@/components/Footer'
 import TransitionEffect from '@/components/TransitionEffect'
 import { Metadata } from 'next'
 import SatGhumtiPrintingPressLogo from '@/../public/SatGhumtiPrintingPressLogo.png'
@@ -111,9 +109,8 @@ export default function RootLayout({
         <meta name="google-site-verification" content="oWDb_xFTLRcdr7zYgeMhGD2IcsOgXfKhzD6oGRdwzPk" />
       </head>
       <body className={inter.className}>
-        <TransitionEffect/>
         <div className="flex flex-col min-h-screen bg-white text-black">
-          <main className="flex-grow">{children}</main>
+          <main className="grow">{children}</main>
         </div>
       </body>
     </html>

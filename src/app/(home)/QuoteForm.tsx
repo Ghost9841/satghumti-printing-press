@@ -34,7 +34,7 @@ export default function QuoteForm() {
           <div className="grid gap-1.5"><Label htmlFor="phone">Phone</Label><Input id="phone" inputMode="tel" autoComplete="tel" value={f.phone} onChange={on("phone")} /></div>
           <div className="grid gap-1.5">
             <Label htmlFor="service">Service</Label>
-            <Select value={f.service} onValueChange={(v) => setF({ ...f, service: v })}>
+            <Select value={f.service || ""} onValueChange={(v) => setF({ ...f, service: v ?? "" })}>
               <SelectTrigger id="service" className="w-full"><SelectValue /></SelectTrigger>
               <SelectContent>{SERVICES.map((s) => <SelectItem key={s.slug} value={s.title}>{s.title}</SelectItem>)}</SelectContent>
             </Select>

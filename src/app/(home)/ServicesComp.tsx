@@ -1,5 +1,7 @@
-import { ArrowUpRight, Icon } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight, Icon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SERVICES } from "@/data/services";
 import { cn } from "@/lib/utils";
@@ -7,11 +9,17 @@ import { cn } from "@/lib/utils";
 export default function Services() {
   return (
     <section id="services" className="mx-auto max-w-6xl scroll-mt-16 px-5 py-20">
-      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What we print</h2>
-      <p className="mb-9 mt-2 max-w-prose text-muted-foreground">Eight services, one press. Pick one to start a quote.</p>
+      <div className="mb-9 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What we print</h2>
+          <p className="mt-2 max-w-prose text-muted-foreground">Eight services, one press. Pick one to see details and prices.</p>
+        </div>
+        <Button asChild variant="outline"><Link href="/services">All services <ArrowRight /></Link></Button>
+      </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {SERVICES.map((s, i) => (
-          <a key={s.slug} href="#quote" className={cn("group", i === 3 && "lg:col-span-2")}>
+          // Change to `/services#${s.slug}` or `/services/${s.slug}` to match your services page
+          <Link key={s.slug} href={`/services#${s.slug}`} className={cn("group", i === 3 && "lg:col-span-2")}>
             <Card className="relative h-full transition-colors group-hover:border-[#D81B72]">
               {s.badge && <Badge className="absolute -top-2.5 right-4 bg-[#FFC800] text-neutral-900 hover:bg-[#FFC800]">{s.badge}</Badge>}
               <CardHeader>
@@ -28,7 +36,7 @@ export default function Services() {
                 <ul className="list-disc space-y-0.5 pl-4 text-sm">{s.items.map((it) => <li key={it}>{it}</li>)}</ul>
               </CardContent>
             </Card>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
