@@ -1,5 +1,3 @@
-
-
 import Difference from "@/components/Difference"
 import HeroSection from "@/components/HeroSection"
 import StayTuned from "@/components/StayTuned"
