@@ -22,20 +22,7 @@ import Process from "@/components/process"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <TransitionEffect/>
-           
-         <HeroSection/>
-
-        
-          <Difference/>
-
-            
-         <ExploreServices/>
-                  
-
-          <StayTuned/>
-
-             <Header />
+      <Header />
       <main>
         <HeroWithAH />
         <Services />

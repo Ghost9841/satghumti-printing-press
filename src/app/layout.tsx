@@ -113,9 +113,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <TransitionEffect/>
         <div className="flex flex-col min-h-screen bg-white text-black">
-          <Navbar />
           <main className="flex-grow">{children}</main>
-          <Footer />
         </div>
       </body>
     </html>

@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Icon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SERVICES } from "@/data/services";
@@ -15,8 +15,8 @@ export default function Services() {
             <Card className="relative h-full transition-colors group-hover:border-[#D81B72]">
               {s.badge && <Badge className="absolute -top-2.5 right-4 bg-[#FFC800] text-neutral-900 hover:bg-[#FFC800]">{s.badge}</Badge>}
               <CardHeader>
-                <span className={cn("mb-2 grid size-10 place-items-center rounded-lg text-white", s.accent, s.accent === "bg-[#FFC800]" && "text-neutral-900")}>
-                  <s.icon className="size-5" />
+                <span className={cn("mb-2 grid size-10 place-items-center rounded-lg text-white")}>
+                  <Icon className="size-5" iconNode={[]} />
                 </span>
                 <CardTitle className="flex items-start justify-between gap-2 text-lg leading-tight">
                   {s.title}
